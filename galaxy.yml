@@ -1,6 +1,6 @@
 namespace: tjenamors
 name: unattended_upgrades
-version: 0.0.2
+version: 0.0.1
 readme: README.md
 authors:
   - the-commits
