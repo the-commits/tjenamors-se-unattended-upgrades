@@ -17,8 +17,6 @@ platforms:
     synced_folders: []
 provisioner:
   name: ansible
-  ansible_args:
-    - --roles-path=$MOLECULE_PROJECT_DIRECTORY/../..
   playbooks:
     converge: converge.yml
     verify: verify.yml
