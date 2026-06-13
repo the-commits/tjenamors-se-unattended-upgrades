@@ -1,0 +1,39 @@
+---
+- name: Verify
+  hosts: all
+  become: true
+  gather_facts: true
+  tasks:
+    - name: Check unattended-upgrades is installed
+      ansible.builtin.package:
+        name: unattended-upgrades
+        state: present
+      check_mode: true
+      register: pkg_check
+      failed_when: pkg_check is changed
+
+    - name: Check needrestart is installed
+      ansible.builtin.package:
+        name: needrestart
+        state: present
+      check_mode: true
+      register: pkg_check
+      failed_when: pkg_check is changed
+
+    - name: Check 20auto-upgrades exists
+      ansible.builtin.stat:
+        path: /etc/apt/apt.conf.d/20auto-upgrades
+      register: auto_file
+      failed_when: not auto_file.stat.exists
+
+    - name: Check 50unattended-upgrades exists
+      ansible.builtin.stat:
+        path: /etc/apt/apt.conf.d/50unattended-upgrades
+      register: fifty_file
+      failed_when: not fifty_file.stat.exists
+
+    - name: Check unattended-upgrades service is running
+      ansible.builtin.systemd:
+        name: unattended-upgrades.service
+      register: svc
+      failed_when: not svc.status.ActiveState == 'active'

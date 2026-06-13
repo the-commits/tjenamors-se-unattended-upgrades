@@ -1,0 +1,30 @@
+// Managed by Ansible — tjenamors-se-unattended-upgrades
+// 50unattended-upgrades — controls which packages are auto-upgraded
+
+Unattended-Upgrade::Allowed-Origins {
+{% for origin in unattended_upgrades_origins %}
+    "{{ origin }}";
+{% endfor %}
+};
+
+Unattended-Upgrade::Package-Blacklist {
+{% for pkg in unattended_upgrades_package_blacklist %}
+    "{{ pkg }}";
+{% endfor %}
+};
+
+Unattended-Upgrade::Automatic-Reboot "{{ unattended_upgrades_automatic_reboot }}";
+Unattended-Upgrade::Automatic-Reboot-Time "{{ unattended_upgrades_automatic_reboot_time }}";
+
+Unattended-Upgrade::Remove-Unused-Dependencies "true";
+Unattended-Upgrade::Remove-New-Unused-Dependencies "true";
+
+Unattended-Upgrade::SyslogEnable "true";
+Unattended-Upgrade::SyslogFacility "daemon";
+
+{% if unattended_upgrades_email_to %}
+Unattended-Upgrade::Mail "{{ unattended_upgrades_email_to }}";
+Unattended-Upgrade::MailOnlyOnError "{{ unattended_upgrades_email_only_on_error }}";
+{% endif %}
+
+Unattended-Upgrade::Sender "{{ unattended_upgrades_email_from }}";

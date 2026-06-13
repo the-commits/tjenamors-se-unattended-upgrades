@@ -1,0 +1,18 @@
+namespace: tjenamors
+name: unattended_upgrades
+version: 0.0.1
+readme: README.md
+authors:
+  - the-commits
+description: Configure unattended-upgrades for automatic security patching on Debian/Ubuntu.
+license:
+  - AGPL-3.0
+tags:
+  - unattended-upgrades
+  - apt
+  - security
+  - patches
+  - system
+dependencies: {}
+repository: https://git.sr.ht/~the-commits/tjenamors-se-unattended-upgrades
+issues: https://git.sr.ht/~the-commits/tjenamors-se-unattended-upgrades

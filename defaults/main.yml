@@ -1,0 +1,42 @@
+---
+# ── Package installation ───────────────────────────────────────────
+unattended_upgrades_install: true
+unattended_upgrades_packages:
+  - unattended-upgrades
+  - needrestart
+
+# ── Automatic update check interval ────────────────────────────────
+# How often apt update runs (in days). 0 = every time the APT timer fires.
+unattended_upgrades_update_days: 0
+
+# Automatically download and install upgrades
+unattended_upgrades_automatic_upgrade: "true"
+unattended_upgrades_automatic_clean: "true"
+
+# ── Package origins (whitelist) ────────────────────────────────────
+# Only packages from these origins will be auto-upgraded.
+# The default restricts to security-only.  Add more origins if desired.
+# Common origin values:
+#   - "${distro_id}:${distro_codename}-security"          (security only)
+#   - "${distro_id}:${distro_codename}-updates"            (all updates)
+#   - "${distro_id}:${distro_codename}"                    (all packages)
+unattended_upgrades_origins:
+  - "${distro_id}:${distro_codename}-security"
+  - "${distro_id}ESMApps:${distro_codename}-apps-security"
+  - "${distro_id}ESM:${distro_codename}-infra-security"
+
+# ── Blacklist ─────────────────────────────────────────────────────
+# Packages matching these patterns will never be auto-upgraded.
+unattended_upgrades_package_blacklist: []
+
+# ── Automatic reboot ──────────────────────────────────────────────
+unattended_upgrades_automatic_reboot: false
+unattended_upgrades_automatic_reboot_time: "02:00"
+
+# ── Email reports ─────────────────────────────────────────────────
+unattended_upgrades_email_from: "root"
+unattended_upgrades_email_to: ""
+unattended_upgrades_email_only_on_error: true
+
+# ── Needrestart configuration ─────────────────────────────────────
+unattended_upgrades_needrestart_mode: "a"

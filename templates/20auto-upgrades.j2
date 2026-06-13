@@ -1,0 +1,7 @@
+// Managed by Ansible — tjenamors-se-unattended-upgrades
+// 20auto-upgrades — controls automatic APT update/upgrade behaviour
+
+APT::Periodic::Update-Package-Lists "{{ unattended_upgrades_update_days }}";
+APT::Periodic::Download-Upgradeable-Packages "{{ unattended_upgrades_automatic_upgrade }}";
+APT::Periodic::AutocleanInterval "{{ unattended_upgrades_automatic_clean }}";
+APT::Periodic::Unattended-Upgrade "{{ unattended_upgrades_automatic_upgrade }}";
