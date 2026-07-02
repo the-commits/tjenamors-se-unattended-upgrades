@@ -14,6 +14,8 @@ tasks:
   - push: |
       set +x
       cd "${repo_name}"
+      git config user.name "the-commits"
+      git config user.email "12031896+the-commits@users.noreply.github.com"
 
       cat > /tmp/notice.md <<'NOTICE'
 
@@ -33,4 +35,4 @@ tasks:
         "${github_username}" \
         "${github_token}" \
         "${github_repo}")
-      git push --all "${github_url}" -f
+      git push -f "${github_url}" HEAD:main
