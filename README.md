@@ -1,5 +1,3 @@
-[![sourcehut](https://img.shields.io/badge/sourcehut-~the--commits/tjenamors--se--unattended--upgrades-2d6b9e?logo=sourcehut)](https://git.sr.ht/~the-commits/tjenamors-se-unattended-upgrades)
-[![GitHub mirror](https://img.shields.io/badge/GitHub-the--commits/tjenamors--se--unattended--upgrades-181717?logo=github)](https://github.com/the-commits/tjenamors-se-unattended-upgrades)
 
 [![sourcehut](https://img.shields.io/badge/sourcehut-~the--commits/tjenamors--se--unattended--upgrades-2d6b9e?logo=sourcehut)](https://git.sr.ht/~the-commits/tjenamors-se-unattended-upgrades)
 [![GitHub mirror](https://img.shields.io/badge/GitHub-the--commits/tjenamors--se--unattended--upgrades-181717?logo=github)](https://github.com/the-commits/tjenamors-se-unattended-upgrades)
