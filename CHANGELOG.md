@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.2
+
+- Fix `automatic_upgrade` and `automatic_clean` defaults from `"true"` to `1` — `apt.systemd.daily` requires numeric intervals, not boolean strings
+
 ## 0.0.1 – 2026-06-13
 
 - Initial release

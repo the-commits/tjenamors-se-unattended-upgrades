@@ -28,8 +28,8 @@ Configure `unattended-upgrades` for automatic security patching on Debian/Ubuntu
 | `unattended_upgrades_install` | `true` | Install and configure packages |
 | `unattended_upgrades_packages` | `[unattended-upgrades, needrestart]` | Packages to install |
 | `unattended_upgrades_update_days` | `0` | APT update interval (days, 0 = every timer fire) |
-| `unattended_upgrades_automatic_upgrade` | `"true"` | Automatically download & install upgrades |
-| `unattended_upgrades_automatic_clean` | `"true"` | Auto-clean downloaded archives |
+| `unattended_upgrades_automatic_upgrade` | `1` | Automatically download & install upgrades |
+| `unattended_upgrades_automatic_clean` | `1` | Days between cleaning downloaded archives |
 | `unattended_upgrades_origins` | `["${distro_id}:${distro_codename}-security", ...]` | Package origins to auto-upgrade |
 | `unattended_upgrades_package_blacklist` | `[]` | Packages to never auto-upgrade |
 | `unattended_upgrades_automatic_reboot` | `false` | Reboot automatically after kernel upgrade |

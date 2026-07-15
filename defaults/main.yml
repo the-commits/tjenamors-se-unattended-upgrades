@@ -10,8 +10,10 @@ unattended_upgrades_packages:
 unattended_upgrades_update_days: 0
 
 # Automatically download and install upgrades
-unattended_upgrades_automatic_upgrade: "true"
-unattended_upgrades_automatic_clean: "true"
+unattended_upgrades_automatic_upgrade: 1
+
+# ── AutocleanInterval ──────────────────────────────────────────────
+unattended_upgrades_automatic_clean: 1
 
 # ── Package origins (whitelist) ────────────────────────────────────
 # Only packages from these origins will be auto-upgraded.
